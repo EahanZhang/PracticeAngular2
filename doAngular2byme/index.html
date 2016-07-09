@@ -6,12 +6,14 @@
    </head>
 
    <body>
-	 <div ng-controller="ParentController">
-	   <div ng-controller="ChildController">
-	     <input type="text" ng-model="person.name" placeholder="Name"></input>
-		 <a ng-click="sayHello()">Say hello</a>
-	   </div>
-	   {{ person }}
-	</div>
+     <div ng-controller="PlayerController">
+	   <button ng-click="play()" class="button" ng-show="!playing">Play</button>
+	   <button ng-click="stop()" class="button alert" ng-show="playing">Stop</button>
+	   Playing audio: <h1>{{ playing }}</h1>
+	 </div>
+     <div ng-controller="RelatedController"></div>
+	 
    </body>
+
  </html>
+
